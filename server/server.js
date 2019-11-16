@@ -6,10 +6,11 @@ var sms = require('./46elks_API/sms_api');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-var port = 8000;
+var port = 9000;
 
 app.post('/sendsms', (req, res) => {
-    
+    sms.send_sms();
+    res.send("Hello World");
 });
 
 app.listen(port, () => {

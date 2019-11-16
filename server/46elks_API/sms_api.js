@@ -1,12 +1,11 @@
-import HTTPotion.base
 const https = require('https')
 const querystring = require('querystring')
 
-const username = 'API-username'
-const password = 'API-password'
+const username = 'uc03aa3c7b30b9bbf71c3f5f78ed756e3'
+const password = '57879EA7C25F85F77A7BB2EE1C165DD5'
 const postFields = {
-  from:    "LuggageWatch",
-  to:      "+393891029139",
+  from:    "Finnair",
+  to:      "+393891029139", 
   message: "Hi,Your luggage has been received at Frankfurt airport. It is ready to be collected at Belt 6A in a few minutes. Finnair, Have a nice day!"
 }
 
@@ -22,6 +21,7 @@ const options = {
   }
 }
 
+
 const callback = (response) => {
   var str = ''
   response.on('data', (chunk) => {
@@ -33,8 +33,14 @@ const callback = (response) => {
   })
 }
 
-var request = https.request(options, callback)
-request.write(postData)
-request.end()
 
+module.exports.send_sms = function () {
+  // Start the web request.
+  var request = https.request(options, callback)
 
+  // Send the real data away to the server.
+  request.write(postData)
+
+  // Finish sending the request.
+  request.end()
+}
