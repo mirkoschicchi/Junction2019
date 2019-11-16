@@ -1,17 +1,13 @@
-var express = require('express');
-var app = express();
-var bodyParser = require("body-parser");
-var sms = require('./46elks_API/sms_api');
-
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
-
-var port = 8000;
-
-app.post('/sendsms', (req, res) => {
-    
+import express from 'express';
+// Express related imports
+// other node package imports
+...
+import models, { connectDb } from './models';
+const app = express();
+// additional Express stuff: middleware, routes, ...
+...
+connectDb().then(async () => {
+  app.listen(process.env.PORT, () =>
+    console.log(`Example app listening on port ${process.env.PORT}!`),
+  );
 });
-
-app.listen(port, () => {
-    console.log("Server has started on port " + port);
-})
