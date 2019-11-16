@@ -10,7 +10,7 @@ var port = 9000;
 
 app.post('/sendsms', (req, res) => {
     sms.send_sms();
-    res.send("Hello World");
+    res.send("SMS sent\n");
 });
 
 app.listen(port, () => {
