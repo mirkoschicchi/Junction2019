@@ -7,7 +7,7 @@ var fetch = require('node-fetch');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-var port = 9000;
+var port = 9000 || process.env.PORT;
 
 app.post('/sendsms', (req, res) => {
     sms.send_sms();
