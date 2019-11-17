@@ -7,7 +7,6 @@
     <title>LuggageWatch</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin">
-    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body style="background-color: #152a44;color: rgb(255,255,255);">
@@ -18,39 +17,55 @@
                 <h3 class="d-flex justify-content-center" style="color: #cedc00;">Baggage: #placeholder</h3>
             </div>
         </div>
-        <div class="border rounded" style="padding: 10px;background-color: #474747;margin: 20px;border-radius: 20px !important;border-color: #CEDC00 !important;">
-            <div class="row" style="height: 80px;">
-                <div class="col-3 d-flex justify-content-center align-items-center"><img src="assets/img/warn.png" style="width: 40px;min-width: 40px;"></div>
+        <div class="dataContainer border rounded" style="padding: 10px;background-color: #474747;margin: 20px;border-radius: 20px !important;border-color: #CEDC00 !important;">
+            <div class="data row" style="height: 80px;">
+                <div class="statusImage col-3 d-flex justify-content-center align-items-center">
+                  <img src="assets/img/warn.png" style="width: 40px;min-width: 40px;">
+                </div>
                 <div class="col-9" style="max-width: 300px;margin: auto;">
                     <div class="row" style="height: 50px;">
                         <div class="col text-left" style="padding-right: 0px;">
-                            <h5 class="text-left d-flex justify-content-center" style="color: rgb(255,255,255);padding: auto;padding-top: 15px;">DELAYED</h5>
+                            <h5 class="status text-left d-flex justify-content-center" style="color: rgb(255,255,255);padding: auto;padding-top: 15px;">
+                              DELAYED
+                            </h5>
                         </div>
                     </div>
                     <div class="row" style="height: 30px;">
                         <div class="col text-left">
-                            <h6>MILAN (MXP)</h6>
+                            <h6 class="city">
+                              MILAN (MXP)
+                            </h6>
                         </div>
                         <div class="col">
-                            <h6 class="text-right">14:54</h6>
+                            <h6 class="statusTime text-right">
+                              14:54
+                            </h6>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row" style="height: 80px;border-bottom: 3px !important;border-color: white !important;">
-                <div class="col-3 d-flex justify-content-center align-items-center"><img src="assets/img/check.png" style="width: 40px;min-width: 40px;"></div>
+            <div class="data row" style="height: 80px;border-bottom: 3px !important;border-color: white !important;">
+                <div class="statusImage col-3 d-flex justify-content-center align-items-center">
+                  <img src="assets/img/check.png" style="width: 40px;min-width: 40px;">
+                </div>
                 <div class="col-9" style="max-width: 300px;margin: auto;">
                     <div class="row" style="height: 50px;">
                         <div class="col text-left" style="padding-right: 0px;">
-                            <h5 class="text-left d-flex justify-content-center" style="color: rgb(255,255,255);padding: auto;padding-top: 15px;">CHECKED-IN</h5>
+                            <h5 class="status text-left d-flex justify-content-center" style="color: rgb(255,255,255);padding: auto;padding-top: 15px;">
+                              CHECKED-IN
+                            </h5>
                         </div>
                     </div>
                     <div class="row" style="height: 30px;">
-                        <div class="col text-left">
-                            <h6>MILAN (MXP)</h6>
+                        <div class=" col text-left">
+                            <h6 class="city">
+                              MILAN (MXP)
+                            </h6>
                         </div>
                         <div class="col">
-                            <h6 class="text-right">14:36</h6>
+                            <h6 class="statusTimetext-right">
+                              14:36
+                            </h6>
                         </div>
                     </div>
                 </div>
@@ -59,6 +74,61 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script>
+        var currentData = [{
+          _id:{
+            device: "mammt",
+            beacon: "sort",
+            status: "tant"
+          }}];
+
+        function updateData(data){
+
+          data.forEach(function(el){
+            var toAdd = true;
+            currentData.forEach(function(el2){
+              if(
+                  el._id.device == el2._id.device &&
+                  el._id.beacon == el2._id.beacon &&
+                  el._id.status == el2._id.status
+              ) {
+                toAdd = false;
+              }
+            });
+            if(toAdd){
+              currentData.push(el);
+              updateView(el);
+            }
+          });
+
+        }
+
+        function updateView(el){
+            var state;
+            var time = new Date();
+            time = time.getHours() + ":" + time.getMinutes();
+            if(el._id.status)
+              state = "ON THE PLANE";
+            else
+              state = "OUT OF THE PLANE";
+            var toAdd = "<div class=\"data row\" style=\"height: 80px;\"><div class=\"statusImage col-3 d-flex justify-content-center align-items-center\"><img src=\"assets/img/check.png\" style=\"width: 40px;min-width: 40px;\"></div><div class=\"col-9\" style=\"max-width: 300px;margin: auto;\"><div class=\"row\" style=\"height: 50px;\"><div class=\"col text-left\" style=\"padding-right: 0px;\"><h5 class=\"status text-left d-flex justify-content-center\" style=\"color: rgb(255,255,255);padding: auto;padding-top: 15px;\">"+state+"</h5></div></div><div class=\"row\" style=\"height: 30px;\"><div class=\"col text-left\"><h6 class=\"city\">MILAN (MXP)</h6></div><div class=\"col\"><h6 class=\"statusTime text-right\">"+time+"</h6></div></div></div></div>";
+            document.getElementsByClassName("dataContainer")[0].innerHTML += toAdd;
+
+        }
+        function loadDoc() {
+          var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+              updateData(JSON.parse(this.responseText));
+
+            }
+          };
+          xhttp.open("GET", "/data", true);
+          xhttp.send();
+        }
+
+        setInterval(loadDoc, 3000);
+    </script>
 </body>
 
 </html>

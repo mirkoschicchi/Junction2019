@@ -5,8 +5,9 @@ var bodyParser = require("body-parser");
 var sms = require('./46elks_API/sms_api');
 var fetch = require('node-fetch');
 
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+//app.use(bodyParser.urlencoded({ extended: false }));
+//app.use(bodyParser.json());
+app.use(express.static('webapp'));
 
 var port = 9000 || process.env.PORT;
 
@@ -14,7 +15,8 @@ var port = 9000 || process.env.PORT;
     const eventSchema = new mongoose.Schema({
       _id:{
         device: String,
-        beacon: String
+        beacon: String,
+        status: Boolean
       },
       timestamp: String,
       luggageId: String
@@ -28,7 +30,8 @@ var port = 9000 || process.env.PORT;
 
     const luggageSchema = new mongoose.Schema({
       _id: String,
-      user: String
+      user: String,
+      device: String
     });
     const Luggage = mongoose.model('Luggage', luggageSchema);
 
@@ -87,18 +90,35 @@ app.get('/isError', (req, res) => {
 app.get('/data', (req, res)=>{
   Event.find(function (err, events) {
     if (err) return console.error(err);
+    console.log("request of data");
     res.send(events);
   });
 });
 
 app.post('/update',(req,res)=>{
   console.log(req.body);
-  var event1 = new Event({_id:{device: req.body.device, beacon: req.body.beacon}});
-  event1.save((err, ev)=>{
+  var event = new Event({_id:{device: req.body.device, beacon: req.body.beacon, status: req.body.status}});
+  event.save((err, ev)=>{
     if (err) return console.error(err);
     console.log("saved");
   });
   res.send("tutt appost o' frat\n");
+});
+
+app.get('/', function(req, res){
+  res.sendFile('index.html');
+});
+
+app.get('/login.html', function(req, res){
+  res.sendFile('login.html');
+});
+
+app.get('/track.html', function(req, res){
+  res.sendFile('track.html');
+});
+
+app.get('/try.html', function(req, res){
+  res.sendFile('try.html');
 });
 
 mongoose.connect('mongodb://localhost/test').then(async () => {
