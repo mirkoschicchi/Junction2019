@@ -14,9 +14,9 @@ class ViewController: NSViewController {
     
     private var centralManager: CBCentralManager?
     private var peripherals: Set<CBPeripheral> = []
-    private timer: Timer!
     
     private let receiverID = "a312341313e2"
+    private let serverName = "192.168.43.154"
     
     @IBOutlet weak var luggageLabel: NSTextField! {
         didSet {
@@ -65,7 +65,7 @@ class ViewController: NSViewController {
             return
         }
         centralManager?.connect(peripheral)
-        
+        self.peripherals.insert(peripheral)
     }
     
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
@@ -74,7 +74,7 @@ class ViewController: NSViewController {
             return
         }
         print("Connected to \(name)")
-        var request = URLRequest(url: URL(string: "http://192.168.43.154:9000/update")!)
+        var request = URLRequest(url: URL(string: "http://\(self.serverName):9000/update")!)
         request.httpMethod = "POST"
         request.httpBody = "beacon=\(name)&device=\(self.receiverID)&status=true".data(using: String.Encoding.utf8)!
                 
