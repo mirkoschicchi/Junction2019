@@ -1,0 +1,14 @@
+use_frameworks!
+
+target 'BluetoothReceiver' do
+  platform :macos, '10.13'
+  ENV['SWIFT_VERSION'] = '5.0'
+  pod 'RxBluetoothKit'
+  pod 'Alamofire'
+end
+
+target 'BluetoothSender' do
+  platform :ios, '9.0'
+  ENV['SWIFT_VERSION'] = '5.0'
+  pod 'RxBluetoothKit'
+end

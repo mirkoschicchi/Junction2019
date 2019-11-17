@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-BluetoothSender/Pods-BluetoothSender-frameworks.sh
+${BUILT_PRODUCTS_DIR}/RxBluetoothKit-iOS/RxBluetoothKit.framework
+${BUILT_PRODUCTS_DIR}/RxSwift-iOS/RxSwift.framework

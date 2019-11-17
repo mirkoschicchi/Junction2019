@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2FD9A6322F37B85C4FE88BFE /* Pods_BluetoothSender.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E210048B649A2E643B998EE /* Pods_BluetoothSender.framework */; };
+		548B559BCE285705876E173F /* Pods_BluetoothReceiver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F923FD047350DB11E710148 /* Pods_BluetoothReceiver.framework */; };
+		92162FB7238075C90009E695 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92162FB6238075C90009E695 /* AppDelegate.swift */; };
+		92162FB9238075C90009E695 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92162FB8238075C90009E695 /* SceneDelegate.swift */; };
+		92162FBB238075C90009E695 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92162FBA238075C90009E695 /* ViewController.swift */; };
+		92162FBE238075C90009E695 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92162FBC238075C90009E695 /* Main.storyboard */; };
+		92162FC0238075C90009E695 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92162FBF238075C90009E695 /* Assets.xcassets */; };
+		92162FC3238075C90009E695 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92162FC1238075C90009E695 /* LaunchScreen.storyboard */; };
+		92162FCA238075F00009E695 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92162FC9238075F00009E695 /* Common.swift */; };
+		92162FCB238075F00009E695 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92162FC9238075F00009E695 /* Common.swift */; };
+		92C1ED1E23803F3400122C8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C1ED1D23803F3400122C8A /* AppDelegate.swift */; };
+		92C1ED2023803F3400122C8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C1ED1F23803F3400122C8A /* ViewController.swift */; };
+		92C1ED2223803F3500122C8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92C1ED2123803F3500122C8A /* Assets.xcassets */; };
+		92C1ED2523803F3500122C8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92C1ED2323803F3500122C8A /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2F923FD047350DB11E710148 /* Pods_BluetoothReceiver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BluetoothReceiver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E210048B649A2E643B998EE /* Pods_BluetoothSender.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BluetoothSender.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92162FB4238075C90009E695 /* BluetoothSender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BluetoothSender.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		92162FB6238075C90009E695 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		92162FB8238075C90009E695 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		92162FBA238075C90009E695 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		92162FBD238075C90009E695 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		92162FBF238075C90009E695 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		92162FC2238075C90009E695 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		92162FC4238075C90009E695 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92162FC9238075F00009E695 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		92C1ED1A23803F3400122C8A /* BluetoothReceiver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BluetoothReceiver.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		92C1ED1D23803F3400122C8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		92C1ED1F23803F3400122C8A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		92C1ED2123803F3500122C8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		92C1ED2423803F3500122C8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		92C1ED2623803F3500122C8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92C1ED2723803F3500122C8A /* BluetoothReceiver.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BluetoothReceiver.entitlements; sourceTree = "<group>"; };
+		B7F3D61DF12F0677EF7B3607 /* Pods-BluetoothSender.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BluetoothSender.debug.xcconfig"; path = "Target Support Files/Pods-BluetoothSender/Pods-BluetoothSender.debug.xcconfig"; sourceTree = "<group>"; };
+		BD46932FFA9B6E4DDED82CD7 /* Pods-BluetoothReceiver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BluetoothReceiver.release.xcconfig"; path = "Target Support Files/Pods-BluetoothReceiver/Pods-BluetoothReceiver.release.xcconfig"; sourceTree = "<group>"; };
+		C1A24B262C043F68E0698DEC /* Pods-BluetoothReceiver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BluetoothReceiver.debug.xcconfig"; path = "Target Support Files/Pods-BluetoothReceiver/Pods-BluetoothReceiver.debug.xcconfig"; sourceTree = "<group>"; };
+		E84CDA1D954D45B367AA874C /* Pods-BluetoothSender.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BluetoothSender.release.xcconfig"; path = "Target Support Files/Pods-BluetoothSender/Pods-BluetoothSender.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		92162FB1238075C90009E695 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FD9A6322F37B85C4FE88BFE /* Pods_BluetoothSender.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92C1ED1723803F3400122C8A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				548B559BCE285705876E173F /* Pods_BluetoothReceiver.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6678F1E4234120B0CF04F51E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2F923FD047350DB11E710148 /* Pods_BluetoothReceiver.framework */,
+				8E210048B649A2E643B998EE /* Pods_BluetoothSender.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8673229D174140AC575B1890 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C1A24B262C043F68E0698DEC /* Pods-BluetoothReceiver.debug.xcconfig */,
+				BD46932FFA9B6E4DDED82CD7 /* Pods-BluetoothReceiver.release.xcconfig */,
+				B7F3D61DF12F0677EF7B3607 /* Pods-BluetoothSender.debug.xcconfig */,
+				E84CDA1D954D45B367AA874C /* Pods-BluetoothSender.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		92162FB5238075C90009E695 /* BluetoothSender */ = {
+			isa = PBXGroup;
+			children = (
+				92162FB6238075C90009E695 /* AppDelegate.swift */,
+				92162FB8238075C90009E695 /* SceneDelegate.swift */,
+				92162FBA238075C90009E695 /* ViewController.swift */,
+				92162FBC238075C90009E695 /* Main.storyboard */,
+				92162FBF238075C90009E695 /* Assets.xcassets */,
+				92162FC1238075C90009E695 /* LaunchScreen.storyboard */,
+				92162FC4238075C90009E695 /* Info.plist */,
+			);
+			path = BluetoothSender;
+			sourceTree = "<group>";
+		};
+		92C1ED1123803F3400122C8A = {
+			isa = PBXGroup;
+			children = (
+				92162FC9238075F00009E695 /* Common.swift */,
+				92C1ED1C23803F3400122C8A /* BluetoothReceiver */,
+				92162FB5238075C90009E695 /* BluetoothSender */,
+				92C1ED1B23803F3400122C8A /* Products */,
+				8673229D174140AC575B1890 /* Pods */,
+				6678F1E4234120B0CF04F51E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		92C1ED1B23803F3400122C8A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				92C1ED1A23803F3400122C8A /* BluetoothReceiver.app */,
+				92162FB4238075C90009E695 /* BluetoothSender.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		92C1ED1C23803F3400122C8A /* BluetoothReceiver */ = {
+			isa = PBXGroup;
+			children = (
+				92C1ED1D23803F3400122C8A /* AppDelegate.swift */,
+				92C1ED1F23803F3400122C8A /* ViewController.swift */,
+				92C1ED2123803F3500122C8A /* Assets.xcassets */,
+				92C1ED2323803F3500122C8A /* Main.storyboard */,
+				92C1ED2623803F3500122C8A /* Info.plist */,
+				92C1ED2723803F3500122C8A /* BluetoothReceiver.entitlements */,
+			);
+			path = BluetoothReceiver;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		92162FB3238075C90009E695 /* BluetoothSender */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92162FC7238075C90009E695 /* Build configuration list for PBXNativeTarget "BluetoothSender" */;
+			buildPhases = (
+				60516068F76E4F19895B0553 /* [CP] Check Pods Manifest.lock */,
+				92162FB0238075C90009E695 /* Sources */,
+				92162FB1238075C90009E695 /* Frameworks */,
+				92162FB2238075C90009E695 /* Resources */,
+				06ED365A15069EFA6DBC550A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BluetoothSender;
+			productName = BluetoothSender;
+			productReference = 92162FB4238075C90009E695 /* BluetoothSender.app */;
+			productType = "com.apple.product-type.application";
+		};
+		92C1ED1923803F3400122C8A /* BluetoothReceiver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92C1ED2A23803F3500122C8A /* Build configuration list for PBXNativeTarget "BluetoothReceiver" */;
+			buildPhases = (
+				2DA6A6CEC637463105BAD483 /* [CP] Check Pods Manifest.lock */,
+				92C1ED1623803F3400122C8A /* Sources */,
+				92C1ED1723803F3400122C8A /* Frameworks */,
+				92C1ED1823803F3400122C8A /* Resources */,
+				3899E3BB92C473045A759BDA /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BluetoothReceiver;
+			productName = BluetoothReceiver;
+			productReference = 92C1ED1A23803F3400122C8A /* BluetoothReceiver.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		92C1ED1223803F3400122C8A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = AntonioAntonino;
+				TargetAttributes = {
+					92162FB3238075C90009E695 = {
+						CreatedOnToolsVersion = 11.2;
+					};
+					92C1ED1923803F3400122C8A = {
+						CreatedOnToolsVersion = 11.2;
+					};
+				};
+			};
+			buildConfigurationList = 92C1ED1523803F3400122C8A /* Build configuration list for PBXProject "BluetoothReceiver" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 92C1ED1123803F3400122C8A;
+			productRefGroup = 92C1ED1B23803F3400122C8A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				92C1ED1923803F3400122C8A /* BluetoothReceiver */,
+				92162FB3238075C90009E695 /* BluetoothSender */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		92162FB2238075C90009E695 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92162FC3238075C90009E695 /* LaunchScreen.storyboard in Resources */,
+				92162FC0238075C90009E695 /* Assets.xcassets in Resources */,
+				92162FBE238075C90009E695 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92C1ED1823803F3400122C8A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92C1ED2223803F3500122C8A /* Assets.xcassets in Resources */,
+				92C1ED2523803F3500122C8A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		06ED365A15069EFA6DBC550A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BluetoothSender/Pods-BluetoothSender-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BluetoothSender/Pods-BluetoothSender-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BluetoothSender/Pods-BluetoothSender-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2DA6A6CEC637463105BAD483 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BluetoothReceiver-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3899E3BB92C473045A759BDA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BluetoothReceiver/Pods-BluetoothReceiver-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BluetoothReceiver/Pods-BluetoothReceiver-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BluetoothReceiver/Pods-BluetoothReceiver-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		60516068F76E4F19895B0553 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BluetoothSender-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		92162FB0238075C90009E695 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92162FCB238075F00009E695 /* Common.swift in Sources */,
+				92162FBB238075C90009E695 /* ViewController.swift in Sources */,
+				92162FB7238075C90009E695 /* AppDelegate.swift in Sources */,
+				92162FB9238075C90009E695 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92C1ED1623803F3400122C8A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92C1ED2023803F3400122C8A /* ViewController.swift in Sources */,
+				92162FCA238075F00009E695 /* Common.swift in Sources */,
+				92C1ED1E23803F3400122C8A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		92162FBC238075C90009E695 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92162FBD238075C90009E695 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		92162FC1238075C90009E695 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92162FC2238075C90009E695 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		92C1ED2323803F3500122C8A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92C1ED2423803F3500122C8A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		92162FC5238075C90009E695 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7F3D61DF12F0677EF7B3607 /* Pods-BluetoothSender.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KY38V7832C;
+				INFOPLIST_FILE = BluetoothSender/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.antonioantonino.BluetoothSender;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		92162FC6238075C90009E695 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E84CDA1D954D45B367AA874C /* Pods-BluetoothSender.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KY38V7832C;
+				INFOPLIST_FILE = BluetoothSender/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.antonioantonino.BluetoothSender;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		92C1ED2823803F3500122C8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Pods/**";
+			};
+			name = Debug;
+		};
+		92C1ED2923803F3500122C8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Pods/**";
+			};
+			name = Release;
+		};
+		92C1ED2B23803F3500122C8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1A24B262C043F68E0698DEC /* Pods-BluetoothReceiver.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BluetoothReceiver/BluetoothReceiver.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = KY38V7832C;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = BluetoothReceiver/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.antonioantonino.BluetoothReceiver;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Pods/**";
+			};
+			name = Debug;
+		};
+		92C1ED2C23803F3500122C8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD46932FFA9B6E4DDED82CD7 /* Pods-BluetoothReceiver.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BluetoothReceiver/BluetoothReceiver.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = KY38V7832C;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = BluetoothReceiver/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.antonioantonino.BluetoothReceiver;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Pods/**";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		92162FC7238075C90009E695 /* Build configuration list for PBXNativeTarget "BluetoothSender" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92162FC5238075C90009E695 /* Debug */,
+				92162FC6238075C90009E695 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92C1ED1523803F3400122C8A /* Build configuration list for PBXProject "BluetoothReceiver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92C1ED2823803F3500122C8A /* Debug */,
+				92C1ED2923803F3500122C8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92C1ED2A23803F3500122C8A /* Build configuration list for PBXNativeTarget "BluetoothReceiver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92C1ED2B23803F3500122C8A /* Debug */,
+				92C1ED2C23803F3500122C8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 92C1ED1223803F3400122C8A /* Project object */;
+}

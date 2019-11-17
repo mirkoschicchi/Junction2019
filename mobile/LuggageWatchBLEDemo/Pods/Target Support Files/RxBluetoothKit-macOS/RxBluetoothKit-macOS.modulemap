@@ -1,0 +1,6 @@
+framework module RxBluetoothKit {
+  umbrella header "RxBluetoothKit-macOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
